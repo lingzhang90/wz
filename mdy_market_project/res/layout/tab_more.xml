@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar_new" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:background="@color/info_panel_bg" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:isScrollContainer="true"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip" >
+
+            <!-- 第二个白框begin -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/shape_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/more_moneylist"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/setting"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp" >
+
+                    <ImageView
+                        android:id="@+id/ImageView01"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/more_icon_richlist" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="10dp"
+                        android:text="上周财富榜"
+                        android:textColor="@drawable/setting_txt"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/into_icon" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:id="@+id/more_herolist"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/setting"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp" >
+
+                    <ImageView
+                        android:id="@+id/ImageView02"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/more_icon_herolist" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="10dp"
+                        android:text="上周英雄榜"
+                        android:textColor="@drawable/setting_txt"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/into_icon" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 第二个白框end -->
+
+
+            <!-- 第二个白框begin -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/shape_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/annouces_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/setting"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp" >
+
+                    <ImageView
+                        android:id="@+id/ImageView03"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/more_icon_tzgg" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="10dp"
+                        android:text="最新资讯"
+                        android:textColor="@drawable/setting_txt"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/into_icon" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:id="@+id/more_prizeCheck"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/setting"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp" >
+
+                    <ImageView
+                        android:id="@+id/ImageView04"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/more_icon_xycj" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="10dp"
+                        android:text="幸运抽奖"
+                        android:textColor="@drawable/setting_txt"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/into_icon" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:id="@+id/setting_update"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/setting"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp" >
+
+                    <ImageView
+                        android:id="@+id/ImageView04"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/more_icon_versionupdate" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="10dp"
+                        android:text="版本更新"
+                        android:textColor="@drawable/setting_txt"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/into_icon" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 第二个白框end -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/shape_bg"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/more_sign"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/setting"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp" >
+
+                    <ImageView
+                        android:id="@+id/ImageView01"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/t_ico_sign" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="10dp"
+                        android:text="每日签到"
+                        android:textColor="@drawable/setting_txt"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/into_icon" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

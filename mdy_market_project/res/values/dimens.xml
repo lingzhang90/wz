@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- titlebar -->
+    <dimen name="titlebar_minheight">48dp</dimen>
+    <dimen name="titlebar_side_padding">13dp</dimen>
+    <dimen name="titlebar_side_text_size">15sp</dimen>
+    <dimen name="titlebar_text_size">22sp</dimen>
+
+</resources>

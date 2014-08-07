@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:background="@color/info_panel_bg" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:isScrollContainer="true"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip" >
+
+            <!-- 第二个白框begin -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/shape_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/setting_update"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/setting"
+                    android:clickable="false"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="15.0dip"
+                        android:text="帐号"
+                        android:textColor="@drawable/setting_txt"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/userLogin_username"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@null"
+                        android:ems="10"
+                        android:hint=""
+                        android:inputType="number" />
+
+                    <ImageView
+                        android:layout_width="19dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.12"
+                        android:src="@drawable/login_userimage" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:id="@+id/setting_logout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/setting"
+                    android:clickable="false"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="15.0dip"
+                        android:text="密码"
+                        android:textColor="@drawable/setting_txt"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/userLogin_password"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="10"
+                        android:hint=""
+                        android:inputType="textPassword" />
+
+                    <ImageView
+                        android:layout_width="19dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.12"
+                        android:src="@drawable/login_passwordimage" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="请输入您要登录的帐号密码 " />
+
+                <TextView
+                    android:id="@+id/userLogin_textView_getPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="UserLoginClick"
+                    android:text="(忘记密码)"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <Button
+                    android:id="@+id/userLogin_btnLogin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/form_btn_black_selector"
+                    android:onClick="UserLoginClick"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/userLogin_btnReg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/form_btn_register"
+                    android:onClick="UserLoginClick"
+                    android:text=""
+                    android:textColor="@color/blue"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <!-- 第二个白框end -->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

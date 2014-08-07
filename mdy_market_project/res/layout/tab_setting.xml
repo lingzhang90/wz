@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <include layout="@layout/titlebar_new" />
+
+    <!--
+    <com.eoe.tampletfragment.view.TitleView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/pointschange_titleimage" />
+
+    <com.lixunkj.weizhuan.tool.ScrollingTextView
+        android:id="@+id/prize_notice_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="50"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/chongzhi_hint_string"
+        android:textColor="#ff0000"
+        android:textSize="18sp" 
+/>
+
+     <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:background="@color/info_panel_bg" >
+    
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:isScrollContainer="true"
+        android:orientation="vertical"
+        android:paddingBottom="10.0dip" >
+
+        <!-- 第二个白框begin -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/shape_bg"
+            android:focusable="false"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/setting_announce"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/setting"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/ImageView01"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/pointschange_qq" />
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:duplicateParentState="true"
+                    android:paddingLeft="10dp"
+                    android:text="Q币充值"
+                    android:textColor="@drawable/setting_txt"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="12.0dip"
+                    android:layout_height="12.0dip"
+                    android:src="@drawable/into_icon" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@drawable/shape_line" />
+
+            <LinearLayout
+                android:id="@+id/setting_tgjc"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/setting"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/ImageView02"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/pointschange_phone" />
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:duplicateParentState="true"
+                    android:paddingLeft="10dp"
+                    android:text="话费充值"
+                    android:textColor="@drawable/setting_txt"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="12.0dip"
+                    android:layout_height="12.0dip"
+                    android:src="@drawable/into_icon" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@drawable/shape_line" />
+
+            <LinearLayout
+                android:id="@+id/setting_problem"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/setting"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/ImageView03"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/pointschange_alipay" />
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:duplicateParentState="true"
+                    android:paddingLeft="10dp"
+                    android:text="支付宝充值"
+                    android:textColor="@drawable/setting_txt"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="12.0dip"
+                    android:layout_height="12.0dip"
+                    android:src="@drawable/into_icon" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@drawable/shape_line" />
+
+            <LinearLayout
+                android:id="@+id/setting_about"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/setting"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/ImageView04"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/pointschange_qqpay" />
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:duplicateParentState="true"
+                    android:paddingLeft="10dp"
+                    android:text="财付通充值"
+                    android:textColor="@drawable/setting_txt"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="12.0dip"
+                    android:layout_height="12.0dip"
+                    android:src="@drawable/into_icon" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+   </ScrollView> 
+
+</LinearLayout>
+
+        <!-- 第二个白框end -->
+
+
+        <!-- 第三个白框begin -->
+        <!-- <include layout="@layout/info_bottom" /> -->
+        <!--
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/shape_bg"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:id="@+id/setting_share"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/setting"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:id="@+id/ImageView06"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/t_ico_share" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="10dp"
+                        android:text="分享到...."
+                        android:textColor="@drawable/setting_txt"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:src="@drawable/into_icon" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:id="@+id/setting_connect"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/setting"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:id="@+id/ImageView05"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/t_ico_connect" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="10dp"
+                        android:text="联系客服"
+                        android:textColor="@drawable/setting_txt"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:src="@drawable/into_icon" />
+                </LinearLayout>
+            </LinearLayout>
+        -->
+        <!-- 第三个白框end -->
+
+
+        <!-- 第二个白框begin -->
+        <!--
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/shape_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/setting_update"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/setting"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:id="@+id/ImageView07"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/t_ico_update" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="10dp"
+                        android:text="版本更新"
+                        android:textColor="@drawable/setting_txt"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:src="@drawable/into_icon" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:id="@+id/setting_logout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/setting"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:id="@+id/ImageView08"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/t_ico_logout" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="10dp"
+                        android:text="注销帐号"
+                        android:textColor="@drawable/setting_txt"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:src="@drawable/into_icon" />
+                </LinearLayout>
+            </LinearLayout>
+        -->
+
+
+        <!-- 第二个白框end -->

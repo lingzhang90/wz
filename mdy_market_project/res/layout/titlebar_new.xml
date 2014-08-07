@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/title_bg"
+    android:minHeight="@dimen/titlebar_minheight" 
+    android:id="@+id/title_relative">
+
+    <FrameLayout
+        android:id="@+id/titlebar_layout_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/titlebar_selector_back"
+        android:minHeight="@dimen/titlebar_minheight"
+        android:paddingLeft="@dimen/titlebar_side_padding"
+        android:paddingRight="@dimen/titlebar_side_padding" >
+
+        <ImageView
+            android:id="@+id/titlebar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/titlebar_btn_back" 
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/titlebar_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="3dp"
+            android:textColor="@color/titlebar_text_color"
+            android:textSize="@dimen/titlebar_side_text_size"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <TextView
+            android:id="@+id/titlebar_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLength="8"
+            android:singleLine="true"
+            android:textColor="@color/titlebar_text_color"
+            android:textSize="@dimen/titlebar_text_size" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/titlebar_layout_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/titlebar_selector_back"
+        android:minHeight="@dimen/titlebar_minheight"
+        android:paddingLeft="@dimen/titlebar_side_padding"
+        android:paddingRight="@dimen/titlebar_side_padding" >
+
+        <TextView
+            android:id="@+id/titlebar_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/titlebar_text_color"
+            android:textSize="@dimen/titlebar_side_text_size"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/titlebar_right_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/titlebar_layout_right_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/titlebar_layout_right"
+        android:background="@drawable/titlebar_selector_back"
+        android:minHeight="@dimen/titlebar_minheight"
+        android:paddingLeft="@dimen/titlebar_side_padding"
+        android:paddingRight="@dimen/titlebar_side_padding"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/titlebar_right_second_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside" />
+    </FrameLayout>
+
+</RelativeLayout>

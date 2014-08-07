@@ -1,0 +1,16 @@
+<resources>
+
+    <color name="titlebar_background">#37AEEB</color>
+    <color name="transparent">#00000000</color>
+    <color name="translucent_white">#7FFFFFFF</color>
+    <color name="titlebar_text_color">#FFFFFF</color>
+    <color name="info_panel_bg">#ffeeeeee</color>
+    <color name="color_c42021">#c42021</color>
+    <color name="color_e33a3b">#e33a3b</color>
+    <color name="white">#FFFFFF</color>
+    <color name="orange">#ffa500</color>
+    <color name="black">#969191</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#0066FF</color>
+
+</resources>
