@@ -57,7 +57,7 @@ public class App extends Application {
 	}
 
 	// 读取缓存
-	public String getCache(String nameString) {
+	public static String getCache(String nameString) {
 		String aaString = cache.getString(nameString, "");
 		if (TextUtils.isEmpty(aaString)) {
 			aaString = "";

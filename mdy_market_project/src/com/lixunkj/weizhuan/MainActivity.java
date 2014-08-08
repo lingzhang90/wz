@@ -1,11 +1,14 @@
 package com.lixunkj.weizhuan;
 
 import com.lixunkj.weizhuan.fragment.HomeFragment;
+import com.umeng.analytics.MobclickAgent;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -25,13 +28,14 @@ public class MainActivity extends FragmentActivity {
 	private RadioButton mineLinearLayout;
 	private RadioButton moreLinearLayout;
 	
-	
+	private  App App;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
+		App=(App) getApplication();
 		setFragmentIndicator(0);
 		initLibrary();
 		initListener();
@@ -130,35 +134,35 @@ public class MainActivity extends FragmentActivity {
 
 	}
 
-//	@Override
-//	public void onBackPressed() {
-//		SharedPreferences sharedPreferences = getSharedPreferences("cache", 0);
-//		String a = sharedPreferences.getString("restcoin", "restcoin");
-//		// String a=MineFragment.coinTextView.getText().toString();
-//		String message = "";
-//		if (App.getCache("isLogin").equals("1")) {
-//			message = "您真的要退出吗？您已经有" + a + "个积分，只要在做两三个任务就能兑换了";
-//		} else {
-//			message = "您真的要退出吗？";
-//		}
-//		new AlertDialog.Builder(this).setTitle("退出提示").setMessage(message)
-//				.setIcon(android.R.drawable.ic_dialog_info)
-//				.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-//					@Override
-//					public void onClick(DialogInterface dialog, int which) {
-//						// 友盟统计——退出应用
-//						MobclickAgent.onEvent(MainActivity.this, "quitApp",
-//								App.getCache("uid"));
-//						App.setCache("isLogin", "0");
-//						App.setCookies("");
-//						Intent startMain = new Intent(Intent.ACTION_MAIN);
-//						startMain.addCategory(Intent.CATEGORY_HOME);
-//						startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//						startActivity(startMain);
-//						System.exit(0);
-//					}
-//				}).setNegativeButton("返回", null).show();
-//	}
+	@Override
+	public void onBackPressed() {
+		SharedPreferences sharedPreferences = getSharedPreferences("cache", 0);
+		String a = sharedPreferences.getString("restcoin", "restcoin");
+		// String a=MineFragment.coinTextView.getText().toString();
+		String message = "";
+		if (App.getCache("isLogin").equals("1")) {
+			message = "您真的要退出吗？您已经有" + a + "个积分，只要在做两三个任务就能兑换了";
+		} else {
+			message = "您真的要退出吗？";
+		}
+		new AlertDialog.Builder(this).setTitle("退出提示").setMessage(message)
+				.setIcon(android.R.drawable.ic_dialog_info)
+				.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// 友盟统计——退出应用
+						MobclickAgent.onEvent(MainActivity.this, "quitApp",
+								App.getCache("uid"));
+						App.setCache("isLogin", "0");
+						App.setCookies("");
+						Intent startMain = new Intent(Intent.ACTION_MAIN);
+						startMain.addCategory(Intent.CATEGORY_HOME);
+						startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+						startActivity(startMain);
+						System.exit(0);
+					}
+				}).setNegativeButton("返回", null).show();
+	}
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
