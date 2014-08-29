@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.http.HttpEntity;
@@ -25,13 +26,25 @@ import org.apache.http.protocol.HTTP;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.ImageLoader.ImageListener;
+import com.lixunkj.weizhuan.R;
+import com.lixunkj.weizhuan.module.home.CarouselUntils;
+import com.lixunkj.weizhuan.network.InitVolley;
+import com.lixunkj.weizhuan.network.NetInterface;
+import com.lixunkj.weizhuan.network.NetWorkStringCallBack;
+import com.lixunkj.weizhuan.network.NetWorkUtils;
+
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
 
 public class WebService {
 
 	private WebApi webApi = new WebApi();
 
+	private String stringa;
 	// 用户注册
 	public String userReg(List<NameValuePair> params) {
 		String urlString = webApi.userReg();
@@ -47,7 +60,17 @@ public class WebService {
 	// 用户登录
 	public String userlogin(List<NameValuePair> params) {
 		String urlString = webApi.userLogin();
-		return httpQuery(urlString, params);
+		Log.e("params----->>>",params.toString() );
+		NetWorkUtils.getInstance().work(
+				NetInterface.getInstance().login(urlString, params),
+				new NetWorkStringCallBack() {
+					@Override
+					public void onComplete(boolean success, String string) {
+						Log.e("string-->>",string );
+						stringa=string;
+					}
+				});
+		return urlString;
 	}
 
 	// 用户找回密码
@@ -227,17 +250,18 @@ public class WebService {
 		String json = null;
 		InputStream is = null;
 		// 获取 JSON 字符串
+		Log.e("inCookiesString-->>",inCookiesString );
 		try {
+			
 			DefaultHttpClient httpClient = new DefaultHttpClient();
 			HttpPost httpPost = new HttpPost(url);
-			// 设置COOKIES
+			
 			if (!inCookiesString.equals("")) {
 				httpPost.setHeader("Cookie", inCookiesString);
 			} else {
 				httpPost.setHeader("Cookie", "");
 			}
 
-//			System.out.println("params  " + params.toString());
 			httpPost.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
 			HttpParams httpparams = new BasicHttpParams();
 			HttpConnectionParams.setConnectionTimeout(httpparams, 10000); // 设置连接超时
@@ -276,7 +300,7 @@ public class WebService {
 			is.close();
 
 			json = sb.toString();
-			System.out.println("接口返回的Json数据是    ：   " + json);
+			Log.e("接口返回的Json数据是    ：   " ,json);
 			Log.e("xuleilei", json);
 
 			JSONObject jsonObj = new JSONObject(json);

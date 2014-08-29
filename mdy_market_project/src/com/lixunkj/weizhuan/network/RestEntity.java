@@ -1,7 +1,10 @@
 package com.lixunkj.weizhuan.network;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Map;
+
+import org.apache.http.NameValuePair;
 
 import com.android.volley.Request.Method;
 
@@ -13,6 +16,7 @@ public class RestEntity implements Serializable {
 	
 	public String url;
 	public Map<String, String> requestData;
+	public List<NameValuePair> params;
 	public int method = Method.GET;
 	@SuppressWarnings("rawtypes")
 	public Class clientClass;
@@ -45,5 +49,8 @@ public class RestEntity implements Serializable {
 		this(method, url, classOfT);
 		this.requestData = data;
 	}
-	
+	public <T>RestEntity(int method, String url,List<NameValuePair> params ){
+		this(method, url);
+		this.params = params;
+	}
 }

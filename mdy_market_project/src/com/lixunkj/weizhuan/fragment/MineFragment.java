@@ -107,48 +107,31 @@ public class MineFragment extends Fragment {
 		minePointinfo.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-//				Intent intent = new Intent(getActivity(), CoinLogActivity.class);
-//				startActivity(intent);
+				
 			}
 		});
 		minePointrecord.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-//				Intent intent = new Intent(getActivity(), BankLogActivity.class);
-//				startActivity(intent);
+				
 			}
 		});
 		minePointexplain.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-//				Intent intent = new Intent(getActivity(),
-//						InviteUserActivity.class);
-//				startActivity(intent);
+				
 			}
 		});
 
 		btnUserInfoButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-//				startActivity(new Intent(getActivity(),
-//						UserProfileListActivity.class));
-			}
+}
 		});
 		logoutButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-//				if (App.getCache("cookies").equals("")) {
-//					App.showMsg("您没有登录");
-//					return;
-//				}
-//				new taskLogout().execute();
-//				App.setCache("cookies", null);
-//				App.setCookies("");
-//				Toast.makeText(getActivity(), "您已成功退出", Toast.LENGTH_SHORT)
-//						.show();
-				// Intent intent = new Intent(getActivity(),
-				// UserLoginActivity.class);
-				// startActivity(intent);
+				
 			}
 		});
 	}

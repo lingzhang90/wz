@@ -40,7 +40,8 @@ public class CarouselView extends RelativeLayout {
 		indicator = (CirclePageIndicator) findViewById(R.id.carouseview_indicator);
 	}
 
-	public void setData(ArrayList<? extends View> views,ViewPagerAdapter adapter) {
+	public void setData(ArrayList<? extends View> views,
+			ViewPagerAdapter adapter) {
 		this.views = views;
 		viewPager.setOnTouchListener(new View.OnTouchListener() {
 
@@ -61,8 +62,8 @@ public class CarouselView extends RelativeLayout {
 
 	public void startCarouse() {
 		executor = Executors.newSingleThreadScheduledExecutor();
-		executor.scheduleWithFixedDelay(new ViewpagerTask(), AppConfig.INITIALDELAY, AppConfig.PERIOD,
-				TimeUnit.SECONDS);
+		executor.scheduleWithFixedDelay(new ViewpagerTask(),
+				AppConfig.INITIALDELAY, AppConfig.PERIOD, TimeUnit.SECONDS);
 	}
 
 	public void cancleCarouse() {

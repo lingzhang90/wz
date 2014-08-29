@@ -134,35 +134,35 @@ public class MainActivity extends FragmentActivity {
 
 	}
 
-	@Override
-	public void onBackPressed() {
-		SharedPreferences sharedPreferences = getSharedPreferences("cache", 0);
-		String a = sharedPreferences.getString("restcoin", "restcoin");
-		// String a=MineFragment.coinTextView.getText().toString();
-		String message = "";
-		if (App.getCache("isLogin").equals("1")) {
-			message = "您真的要退出吗？您已经有" + a + "个积分，只要在做两三个任务就能兑换了";
-		} else {
-			message = "您真的要退出吗？";
-		}
-		new AlertDialog.Builder(this).setTitle("退出提示").setMessage(message)
-				.setIcon(android.R.drawable.ic_dialog_info)
-				.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						// 友盟统计——退出应用
-						MobclickAgent.onEvent(MainActivity.this, "quitApp",
-								App.getCache("uid"));
-						App.setCache("isLogin", "0");
-						App.setCookies("");
-						Intent startMain = new Intent(Intent.ACTION_MAIN);
-						startMain.addCategory(Intent.CATEGORY_HOME);
-						startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-						startActivity(startMain);
-						System.exit(0);
-					}
-				}).setNegativeButton("返回", null).show();
-	}
+//	@Override
+//	public void onBackPressed() {
+//		SharedPreferences sharedPreferences = getSharedPreferences("cache", 0);
+//		String a = sharedPreferences.getString("restcoin", "restcoin");
+//		// String a=MineFragment.coinTextView.getText().toString();
+//		String message = "";
+//		if (App.getCache("isLogin").equals("1")) {
+//			message = "您真的要退出吗？您已经有" + a + "个积分，只要在做两三个任务就能兑换了";
+//		} else {
+//			message = "您真的要退出吗？";
+//		}
+//		new AlertDialog.Builder(this).setTitle("退出提示").setMessage(message)
+//				.setIcon(android.R.drawable.ic_dialog_info)
+//				.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+//					@Override
+//					public void onClick(DialogInterface dialog, int which) {
+//						// 友盟统计——退出应用
+//						MobclickAgent.onEvent(MainActivity.this, "quitApp",
+//								App.getCache("uid"));
+//						App.setCache("isLogin", "0");
+//						App.setCookies("");
+//						Intent startMain = new Intent(Intent.ACTION_MAIN);
+//						startMain.addCategory(Intent.CATEGORY_HOME);
+//						startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//						startActivity(startMain);
+//						System.exit(0);
+//					}
+//				}).setNegativeButton("返回", null).show();
+//	}
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
